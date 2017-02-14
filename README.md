@@ -9,6 +9,8 @@
 
 この分割単位で見出しを改行するようなプログラムをクライアントサイドで実行させます。
 
+<a href="https://lowreal.net/2017/midashi-kaigyo/">デモ</a>
+
 ## ファイル
 
 ### ./balance.js
