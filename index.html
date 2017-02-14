@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+
+		<title>日本語見出しの改行位置補正</title>
+
+		<link rev="made" href="mailto:cho45@lowreal.net"/>
+		<style>
+			/*
+			 * Sawarabi Mincho (Japanese) https://fonts.google.com/earlyaccess
+			 */
+			@font-face {
+			  font-family: 'Sawarabi Mincho';
+			  font-style: normal;
+			  font-weight: 400;
+			  src: url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.eot);
+			  src: url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.eot?#iefix) format('embedded-opentype'),
+				   url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.woff2) format('woff2'),
+				   url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.woff) format('woff'),
+				   url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.ttf) format('truetype');
+			}
+		</style>
+
+		<style>
+			section {
+				padding: 10px;
+				margin: 10px;
+				background: #efefef;
+			}
+
+			.diff {
+				display: flex;
+			}
+
+			.container {
+				flex: content;
+				outline: 1px red solid;
+				margin: 10px auto;
+			}
+
+			body {
+				width: 860px;
+				font-size: 16px;
+				margin: 0 auto;
+				line-height: 1.22;
+				font-family:
+					'Sawarabi Mincho', 
+					YuMincho,
+					"Hiragino Mincho ProN",
+					"HG明朝E",
+					serif;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-weight: normal;
+				font-size: 20px;
+				white-space: pre-line;
+			}
+
+			header {
+				width: 800px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>日本語見出しの改行位置補正</h1>
+			<p>左が未補正・右が補正ずみ。<a href="https://github.com/shogo82148/TinySegmenterMaker">TinySegmenterMaker</a> で生成した改行位置特化の TinySegmenter で分割を行い、行を適当な位置で改行しています。</p>
+		</header>
+		<div class="diff" id="base">
+			<div style="width: 420px" class="container">
+				<section style="">
+					<h1>test</h1>
+				</section>
+				<section style="">
+					<h1>自動的にCSSから色を抽出して sRGB を適用する</h1>
+				</section>
+				<section style="">
+					<h1>カメラ・写真関係でよく聞く定義のはっきりしない準オカルト用語</h1>
+				</section>
+				<section style="">
+					<h1>α6000 レンズキットを買って失敗した</h1>
+				</section>
+				<section style="">
+					<h1>ColorMunki Photo + Argyll CMS で環境光を測定してグラフ化</h1>
+				</section>
+				<section style="">
+					<h1>カメラごとの最大絞り値や手ぶれを許容できるシャッタースピード</h1>
+				</section>
+				<section style="">
+					<h1>Kindle Paperwhite のブラウザ(体験版)のWebSocketがおかしい(未解決)</h1>
+				</section>
+				<section style="">
+					<h1><a href="">RabbitMQ に TLSv1.1 で接続しようとしても tlsv1 alert insufficient security と言われる</a></h1>
+				</section>
+				<section style="">
+					<h1>Google Photos のアルバム共有がよくできててビビった</h1>
+				</section>
+				<section style="">
+					<h1>一眼レフは終わったな、と思った</h1>
+				</section>
+				<section style="">
+					<h1>Raspberry Pi で別のマシンと有線LANを直結して通信</h1>
+				</section>
+				<section style="">
+					<h1>8K いらないみたいな話を見ると腹が立ってくる</h1>
+				</section>
+				<section style="">
+					<h1>センサーデータ用に RabbitMQ + MQTT をセットアップする</h1>
+				</section>
+				<section style="">
+					<h1>ESP8266 Arduino で CO2 センサー MH-Z19 を読む</h1>
+				</section>
+				<section style="">
+					<h1>歪みゲージと HX711 を使って重量計測する (Arduino)</h1>
+				</section>
+				<section style="">
+					<h1>MH-Z19 の個体差とキャリブレーションの必要性</h1>
+				</section>
+				<section style="">
+					<h1>Arduino の digitalWrite をコンパイルタイムに解決する</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="./tinysegmenter.js"></script>
+		<script src="./fontfaceobserver.js"></script>
+		<script src="balance.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
